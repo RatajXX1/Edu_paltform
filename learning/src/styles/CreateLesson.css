@@ -1,0 +1,519 @@
+.CreateLesson_main_view {
+    position: relative;
+    display: block;
+    width: 90%;
+    min-height: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 25px;
+    margin-left: 20px;
+    padding-bottom: 120px;
+}
+
+.CreateLesson_main_view_header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(71, 71, 73, 0.42);
+}
+
+.CreateLesson_main_view_header h1{
+    display: block;
+    position: relative;
+    margin: 0 0 7px 15px;
+top: 5px;
+}
+
+.CreateLesson_main_view_body {
+    position: relative;
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.CreateLesson_main_view_body_seletct_background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    left: 50%;
+    margin-top: 10px;
+    transform: translate(-50%, 0);
+}
+.CreateLesson_main_view_body_seletct_background_edit {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    left: 50%;
+    margin-top: 10px;
+    transform: translate(-50%, 0);
+}
+
+.CreateLesson_main_view_select_image {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #282c34;
+    border: 1px solid #282c34;;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 2px 0 2px 0;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.CreateLesson_main_view_select_image:hover {
+    background-color: transparent;
+    color: #282c34;
+}
+
+.CreateLesson_main_view_body_text {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*border-bottom: 1px solid #282c34;*/
+    height: auto;
+    margin-top: 20px;
+    cursor: text;
+}
+
+.CreateLesson_main_view_body_text h2 {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    /*background-color: #282c34;*/
+    font-weight: lighter;
+    /*color: white;*/
+    padding: 0 5px 0 5px;
+    margin-bottom: 3px;
+}
+
+.CreateLesson_main_view_body_text input[type='text'] {
+    display: inline-block;
+    position: relative;
+    width: 92%;
+    outline: none;
+    background-color: transparent;
+    color: #282c34;
+    border: none;
+    /*margin-left: 10px;*/
+    /*border-bottom: 1px solid #282c34;*/
+    /*border-radius: 5px;*/
+    font-size: 29px;
+    cursor: text;
+    /*padding: 5px 5px 5px 5px;*/
+}
+
+.CreateLesson_main_view_editor {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: block;
+    margin-top: 10px;
+}
+
+.CreateLesson_main_view_summary {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 100px;
+}
+
+.CreateLesson_main_view_summary button {
+    position: relative;
+    display: block;
+    float: right;
+    background-color: #282c34;
+    width: 100px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    transition: 1s;
+}
+
+.CreateLesson_main_view_summary button:hover {
+    background-color: transparent;
+    color: #282c34;
+}
+
+.CreateLesson_main_view_body_text textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    resize: none;
+    margin-top: 10px;
+    outline: none;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #282c34;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.CreateLesson_main_view_add_chapter {
+    display: block;
+    position: relative;
+    margin-top: 70px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 130px;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    transition: 1s;
+}
+
+.CreateLesson_main_view_add_chapter:hover {
+    background-color: #282c34;
+    color: white;
+}
+
+.CreateLesson_main_view_body_text_answer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.CreateLesson_main_view_body_text_answer select {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.CreateLesson_main_view_body_text_answer label {
+    display: block;
+    position: relative;
+    background-color: #282c34;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.CreateLesson_main_view_body_text_answer label:hover {
+    background-color: transparent;
+    color: #282c34;
+}
+
+.CreateLesson_main_view_body_text_answer_files {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.container_lesson {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*top: 50%;*/
+    /*transform: translate(0, -50%);*/
+    height: 35px;
+    /*border: 1px solid #282c34;*/
+    /*border-radius: 5px;*/
+}
+
+/* Hide the browser's default checkbox */
+.container_lesson input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark_lesson {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 5px;
+    border: 1px solid #282c34;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_lesson:hover input ~ .checkmark_lesson {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_lesson input:checked ~ .checkmark_lesson {
+    background-color: #282c34;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_lesson:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_lesson input:checked ~ .checkmark_lesson:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_lesson .checkmark_lesson:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.CreateLesson_main_view_expire_date, .CreateLesson_main_view_PassCode {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+
+.CreateLesson_main_view_PassCode input {
+    display: inline-block !important;
+    border: 1px solid #282c34 !important;
+    border-radius: 5px;
+    width: 150px !important;
+    font-size: 16px !important;
+    padding: 5px !important;
+    margin-left: 25px;
+}
+
+.CreateLesson_main_view_PassCode button {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #282c34;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 15px;
+    padding: 5px;
+    color: #282c34;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 25px;
+    transition: 1s;
+}
+
+.CreateLesson_main_view_PassCode button:hover {
+    background-color: #282c34;
+    color: white;
+}
+
+#CreateLesson_main_view_expire_date_input {
+    background-color: transparent;
+    border: 1px solid #282c34;
+    width: auto;
+    font-size: 15px;
+    margin-left: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.CreateLesson_main_view_body_remove_chapter {
+    display: block;
+    position: absolute;
+    width: 135px;
+    height: 35px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    fill: #282c34;
+    text-align: left;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.CreateLesson_main_view_body_remove_chapter svg {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 4px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.CreateLesson_main_view_body_remove_chapter:hover {
+    background-color: #282c34;
+    fill: white;
+    border-radius: 50px;
+    color: white;
+}
+
+
+.CreateLesson_creatingpop {
+    position: relative;
+    /*z-index: 3;*/
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(40, 44, 52, 0.25);*/
+}
+
+.CreateLesson_creatingpop fieldset {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 600px;
+    background-color: #282c34;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    /*padding: 10px 5px 10px 0;*/
+}
+
+.CreateLesson_creatingpop button {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #282c34;
+    font-size: 17px;
+    width: 160px;
+    border: 1px solid #282c34;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.CreateLesson_creatingpop button:hover {
+    background-color: #282c34;
+    color: white;
+}
+
+.CreateLesson_creatingpop svg {
+    position: absolute;
+    display: block;
+    fill: white;
+    right: 10px;
+    top: 40%;
+    transform: translate(0, -50%);
+    width: 22px;
+    height: 22px;
+}
+
+.CreateLesson_creatingpop_done_logo {
+    position: relative !important;
+    display: block !important;
+    width: 100px !important;
+    height: 100px !important;
+    fill: #282c34 !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    margin-top: 50px;
+
+}
+
+.CreateLesson_creatingpop legend {
+    position: relative;
+    top: -10px;
+    color: black;
+}
+
+.CreateLesson_creatingpop h2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.CreateLesson_creatingpop_view_loading {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 1600px) {
+    .CreateLesson_main_view {
+        margin: 0;
+        width: 100%;
+    }
+    @media (max-width: 1450px) {
+        .CreateLesson_main_view_body_text input[type='text'] {
+            width: 80%;
+        }
+        @media (max-width: 635px) {
+            .CreateLesson_main_view_body_text_answer {
+                margin-top: 60px;
+            }
+        }
+        @media (max-width: 480px) {
+            .CreateLesson_main_view_body_text input[type='text'] {
+                width: 70%;
+            }
+            .CreateLesson_main_view_body {
+                width: 95%;
+            }
+            .CreateLesson_main_view_body_text_answer {
+                margin-top: 90px;
+            }
+            @media (max-width: 210px) {
+                .CreateLesson_main_view_body_text_answer {
+                    margin-top: 110px;
+                }
+            }
+        }
+    }
+}

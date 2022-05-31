@@ -1,0 +1,285 @@
+.Sharelesson_main_view {
+    display: block;
+    position: relative;
+    width: 600px;
+    max-height: 600px;
+    height: auto;
+    margin-top: 20px;
+    background-color: #282c34;
+    padding-top: 15px;
+    border-radius: 5px;
+    /*overflow: auto;*/
+    border: 1px solid #282c34;
+    overflow: hidden;
+}
+
+.Sharelesson_main_view button {
+    display: inline-block;
+    /*border: none;*/
+    color: #e3e3e3;
+    width: 120px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #282c34;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+}
+
+.Sharelesson_main_view_bt_selected {
+    background-color: #e3e3e3 !important;
+    border: 1px solid #282c34 !important;
+    border-radius: 5px !important;
+    color: #282c34 !important;
+}
+
+.Sharelesson_main_view_table {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    max-height: 500px;
+    /*overflow: hidden;*/
+    /*overflow: auto;*/
+    /*border: 1px solid #282c34;*/
+}
+
+.Sharelesson_main_view_table thead {
+    padding: 5px;
+    height: 25px;
+}
+
+.Sharelesson_main_view_table tbody {
+    /*height: 600px;*/
+    overflow: hidden;
+}
+
+.Sharelesson_main_view_table tbody > tr:nth-child(1n)  {
+    background-color: white;
+}
+
+.Sharelesson_main_view_table tbody > tr:nth-child(2n)  {
+    background-color: #f5f5f5;
+}
+
+
+/*.Sharelesson_main_view_table thead {*/
+/*    background-color: #aba9a9;*/
+/*    height: 30px;*/
+/*}*/
+
+.Sharelesson_main_view_table tbody {
+    border-collapse: collapse;
+    
+    /*border-spacing: 100px;*/
+    /*border: 1px solid #282c34;*/
+}
+
+.Sharelesson_main_view_table_user_item {
+    position: relative;
+    width: 300px;
+    height: 55px;
+    /*border-right: 1px solid #282c34;*/
+    /*border-bottom: 1px solid #282c34;*/
+    border-collapse: collapse;
+    /*border: 1px solid #282c34;*/
+}
+
+.Sharelesson_main_view_table_user_item a {
+    position: absolute;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    /*height: auto;*/
+    /*background-color: red;*/
+    left: 0;
+    padding-left: 75px;
+    top: 50%;
+    transform: translate(0, -50%);
+    line-height: 55px;
+}
+
+.Sharelesson_main_view_table_user_item_image {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid #282c34;
+    border-radius: 50%;
+    float: left;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 20px;
+}
+
+.Sharelesson_main_view_table_user_item_image img, .Sharelesson_main_view_table_user_item_image svg{
+    position: relative;
+    display: block;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Sharelesson_main_view_search {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    right: 10px;
+    top: 10px;
+    border-radius: 50px;
+}
+
+.Sharelesson_main_view_search input {
+    position: relative !important;
+    display: block !important;
+    width: 75% !important;
+    height: 100%;
+    background-color: transparent;
+    color: #282c34;
+    left: 52%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px !important;
+    border: unset !important;
+}
+
+.Sharelesson_main_view_search svg {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 5px;
+    fill: #656565;
+}
+
+.ShareLesson_container {
+    display: block;
+    position: relative;
+    /*padding-left: 35px;*/
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    /*font-size: 14px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*float: left;*/
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* Hide the browser's default checkbox */
+.ShareLesson_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+}
+
+/* Create a custom checkbox */
+.ShareLesson_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #282c34;
+}
+
+/* On mouse-over, add a grey background color */
+.ShareLesson_container:hover input ~ .ShareLesson_checkmark {
+    background-color: #ccc;
+    text-decoration: underline;
+}
+
+/* When the checkbox is checked, add a blue background */
+.ShareLesson_container input:checked ~ .ShareLesson_checkmark {
+    background-color: #282c34;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.ShareLesson_checkmark:after {
+    content: "";
+    left: 202px;
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.ShareLesson_container input:checked ~ .ShareLesson_checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.ShareLesson_container .ShareLesson_checkmark:after {
+    /*position: relative;*/
+    /*display: block;*/
+    left: 8px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.ShareLesson_container input:checked ~ .ShareLesson_checkmark::after {
+    position: relative;
+    display: block;
+    left: 7px;
+    top: 4px;
+}
+
+@media (max-width: 700px) {
+    .Sharelesson_main_view {
+        width: 450px;
+    }
+    .Sharelesson_main_view_table_user_item {
+        width: 360px;
+    }
+    .Sharelesson_main_view button {
+        margin-top: 35px;
+    }
+    @media (max-width: 510px) {
+        .Sharelesson_main_view {
+            width: 400px;
+        }
+        .Sharelesson_main_view_table_user_item {
+            width: 320px;
+        }
+        @media (max-width: 415px) {
+            .Sharelesson_main_view {
+                width: 100%;
+            }
+            .Sharelesson_main_view_table_user_item {
+                width: 75vw;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

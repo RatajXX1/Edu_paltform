@@ -1,0 +1,115 @@
+
+.Dash_main_view {
+    position: relative;
+    display: block;
+    width: 1300px;
+    height: 850px;
+    margin: 25px 0 0 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    flex-shrink: 0;
+    user-select: none;
+    overflow-x: hidden;
+    /*border: 1px solid rgba(71, 71, 73, 0.42);*/
+}
+
+.Dash_main_view_head {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0 0 ;
+    border-bottom: 1px solid rgba(71, 71, 73, 0.42);
+}
+
+.Dash_main_view_head h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    color: #484848;
+    user-select: none;
+}
+
+.Dash_main_view_last_lesson {
+    position: absolute;
+    /*bottom: 50px;*/
+    /*top: 50px;*/
+    bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
+    /*border: 1px solid rgba(71, 71, 73, 0.42);*/
+    border-radius: 5px;
+    /*overflow: auto;*/
+}
+
+.Dash_main_view_last_lesson h2 {
+    /*font-size: 19px;*/
+
+    display: block;
+    position: relative;
+    left: 25px;
+}
+
+.Dash_main_view_last_lesson_list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    height: 300px;
+    padding-left: 20px;
+    /*padding-right: 20px;*/
+    scroll-padding-right: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 20px;
+    gap: 10px;
+    /*overflow: auto;*/
+}
+
+.Dash_main_view_last_lesson_list > div {
+    margin-right: 10px;
+}
+
+
+.Dash_main_view_last_lesson_list_warring {
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #7e7e7e;
+}
+
+.Dash_main_view_hello_view {
+    position: relative;
+    display: block;
+    top: 30px;
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /*font-size: 18px;*/
+    /*white-space: pre;*/
+}
+
+.Dash_main_view_hello_view h1 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media (max-width: 1600px) {
+    .Dash_main_view {
+        width: 100%;
+        margin: 0 0 0 0;
+        /*padding-left: 20px;*/
+        /*width: calc(100%-25px);*/
+    }
+}

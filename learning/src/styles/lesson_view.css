@@ -1,0 +1,360 @@
+.Dash_lesson_view {
+    display: block;
+    position: relative;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 500px;
+    padding-bottom: 100px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.Dash_lesson_view_header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid rgba(71, 71, 73, 0.42);
+}
+
+.Dash_lesson_view_header h1 {
+    position: relative;
+    margin: 10px 0 0 0;
+    display: block;
+    width: 95%;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.Dash_lesson_view_header_background {
+    position: relative;
+    display: block;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.Dash_lesson_view_header_background img {
+    position: relative;
+    display: block;
+    width: 100%;
+
+}
+
+.Dash_main_view_body {
+    position: relative;
+    display: block;
+    width: 95%;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.Dash_main_view_body_chapter_additionals {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-top: 70px;
+}
+
+.Dash_main_view_body_chapter_additionals img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+}
+
+.Dash_main_view_body_chapter_additionals_header {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid rgba(71, 71, 73, 0.42);
+}
+
+.Dash_main_view_body_chapter_additionals_header h2 {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+    margin: 0;
+    background-color: rgba(71, 71, 73, 0.42);
+    color: #282c34;
+    margin-right: 10px;
+}
+
+.Dash_main_view_body_chapter_additionals_header a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Dash_lesson_view_summary {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+
+.Dash_lesson_view_summary button {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: #282c34;
+    /*margin-top: 100px;*/
+    width: 100px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    float: right;
+    right: 50px;
+    border: 1px solid #282c34;
+    transition: 1s;
+    user-select: none;
+}
+
+.Dash_lesson_view_summary button:hover {
+    background-color: transparent;
+    color: #282c34;
+}
+
+.Dash_main_view_body_chapter_files {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+}
+
+.Dash_main_view_body_chapter_files_item {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 40px;
+    /*border: 1px solid rgba(71, 71, 73, 0.42);*/
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.Dash_main_view_body_chapter_files_item:hover {
+    opacity: .5;
+}
+
+.Dash_main_view_body_chapter_files_item_text {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 70%;
+    height: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 30px;
+}
+
+.Dash_main_view_body_chapter_files_item_text a {
+    display: block;
+    position: relative;
+    /*padding-left: 30px;*/
+    /*width: 50%;*/
+    height: fit-content;
+    /*left: 50%;50*/
+    top: 50%;
+    transform: translate(0, -50%);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.Dash_main_view_body_chapter_files_item svg {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 40px;
+    top: 50%;
+    fill: #282c34;
+    transform: translate(0, -50%);
+}
+
+.Dash_lesson_view_summary_editor {
+    position: relative;
+    width: 90%;
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.Dash_lesson_view_summary_addFiles {
+    position: relative;
+    display: block;
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 50px;
+}
+
+.Dash_lesson_view_summary_addFiles input[type='file'] {
+    display: none;
+}
+
+.Dash_lesson_view_summary_addFiles label {
+    cursor: pointer;
+    display: block;
+    /*background-color: #282c34;*/
+    color: #282c34;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    transition: 1s;
+    user-select: none;
+}
+
+.Dash_lesson_view_summary_addFiles label:hover {
+    background-color: #282c34;
+    color: white;
+}
+
+.Dash_lesson_view_summary_addFiles_list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Dash_main_view_body_chapter_files_item_close {
+    right: 2px;
+    /*display: none !important;*/
+}
+
+.Dash_main_view_body_chapter_files_item_close_bt:hover svg {
+    display: block !important;
+}
+
+.ql-editor {
+    font-size: 17px;
+}
+
+.Dash_lesson_view_proceed_pop_back {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.49);
+    top: 0;
+    left: 0;
+}
+
+.Dash_lesson_view_proceed_pop {
+    position: absolute;
+    background-color: #fff8f8;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    -webkit-box-shadow: 0px 0px 18px -9px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 18px -9px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 18px -9px rgba(66, 68, 90, 1);
+    border-radius: 5px;
+
+}
+
+.Dash_lesson_view_proceed_pop h2 {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.Dash_lesson_view_proceed_pop_buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Dash_lesson_view_proceed_pop_buttons button {
+    cursor: pointer;
+    width: 150px;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 1s;
+}
+
+#Dash_lesson_view_proceed_pop_buttons_No {
+    background-color: transparent;
+    color: #282c34;
+    border: 1px solid #282c34;
+}
+
+#Dash_lesson_view_proceed_pop_buttons_No:hover {
+    background-color: #282c34;
+    color: white;
+}
+
+#Dash_lesson_view_proceed_pop_buttons_Yes {
+    background-color: #282c34;
+    color: white;
+    border: 1px solid #282c34;
+}
+
+#Dash_lesson_view_proceed_pop_buttons_Yes:hover {
+    background-color: transparent;
+    color: #282c34;
+}
+
+.Dash_lesson_view_proceed_pop_body {
+    position: relative;
+    display: block;
+    width: 100%;
+    top: 0;
+}
+
+.Dash_lesson_view_proceed_pop_body img {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 150px;
+}
+
+.Dash_lesson_view_proceed_pop_body svg {
+    margin: 0 !important;
+    width: 100px;
+}
+
+.Dash_lesson_view_proceed_pop_body button {
+    width: 120px;
+    padding: 5px;
+    background-color: #282c34;
+    color: white;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+    transform: translate(-50%, 0);
+}
+

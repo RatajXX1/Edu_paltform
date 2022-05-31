@@ -1,0 +1,116 @@
+.Calendar_pop_back {
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: auto;
+    padding-bottom: 15px;
+    z-index: 2;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 9px 0px rgba(66, 68, 90, 1);
+    top: -100px;
+    border-radius: 5px;
+    cursor: default;
+    right: -260px;
+}
+
+.Calendar_pop_back_head {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #282c34;
+    margin-top: 5px;
+    padding-bottom: 2px;
+}
+
+.Calendar_pop_back_head a {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: auto;
+    line-height: 30px;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.Calendar_pop_back_head button {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+.Calendar_pop_back_head button:hover {
+    background-color: #282c34;
+    fill: white;
+    border-radius: 15px;
+}
+
+.Calendar_pop_back_head svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Calendar_pop_back_body {
+    position: relative;
+    width: 10%;
+    display: grid;
+    grid-template-columns: repeat(7,25px [col-start]);
+    gap: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.Calendar_pop_back_body_days {
+    position: relative;
+    display: block;
+    text-align: center;
+    user-select: none;
+}
+
+.Calendar_pop_back_body_items {
+    display: block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.Calendar_pop_back_body_items:hover {
+    background-color: #282c34;
+    color: white;
+    border-radius: 5px;
+}
+
+.Calendar_pop_back_body_items_hidden {
+    color: transparent;
+    cursor: default !important;
+}
+
+.Calendar_pop_back_body_items_hidden:hover {
+    color: transparent !important;
+    background-color: transparent !important;
+}
