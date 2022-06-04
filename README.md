@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Education platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Is simple education platform to make multiples chapters lessons.
+This platform is maked in React.js with pure PHP on backend server.
 
 ## Available Scripts
 
