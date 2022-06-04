@@ -3,6 +3,12 @@
 Is simple education platform to make multiples chapters lessons.
 This platform is maked in React.js with pure PHP on backend server.
 
+![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut%20ekranu%202022-06-4%20o%2020.07.13.png?raw=true)
+
+![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut ekranu 2022-06-4 o 20.07.09.png?raw=true)
+
+![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut ekranu 2022-06-4 o 20.07.09.png?raw=true)
+
 ## Available Scripts
 
 In the project directory, you can run:
