@@ -29,6 +29,7 @@ export default {
                 }
             } else return false;
         } catch (e) {
+            console.log(e)
             return false
         }
     },
