@@ -7,7 +7,7 @@ This platform is maked in React.js with pure PHP on backend server.
 
 ![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut%20ekranu%202022-06-4%20o%2020.07.09.png?raw=true)
 
-![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut%20ekranu%202022-06-4%20o%2020.07.22.pngraw=true)
+![alt text](https://github.com/RatajXX1/Edu_paltform/blob/main/Images/Zrzut%20ekranu%202022-06-4%20o%2020.07.22.png?raw=true)
 
 ## Available Scripts
 
