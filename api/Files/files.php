@@ -1,4 +1,6 @@
 <?php
+ini_set('post_max_size', '64M');
+ini_set('upload_max_filesize', '64M');
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
@@ -22,6 +24,7 @@ $sql_cursor = sql_con();
 if (enter_to_view($sql_cursor) && isset($_FILES) && count($_FILES) > 0) {
     $query = "INSERT INTO Files (FileName, FilePath, UserAdd) values ";
     $names = array();
+//    var_dump($_FILES);
     foreach ($_FILES as $val) {
         $newFileName = '';
         do {

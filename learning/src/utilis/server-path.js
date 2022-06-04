@@ -1,5 +1,5 @@
-// const path = "http://192.168.0.9:8080/"
-const path = "/"
+const path = "http://192.168.0.9:8080/"
+// const path = "/"
 
 export default function serverPath() {
     if (window.localStorage.getItem("RPath") !== undefined) {

@@ -1,7 +1,10 @@
-##Lekcja 
 
-1. Stworzenia lekcjia 
-    
-    Rodział.1 [ x ]
-    Rodział.2 [  ]
-2. Pobiera ten rodział nie zrobione 
+
+## Testowanie 
+
+- [X] Logowanie 
+- [X] Rejestracja
+- [X] Tworzenie i edycja grup
+- [X] Tworzenie i edycja uzytkowników
+- [X] Tworzenie lekcji
+- [X] Uzupełnanie lekcji

@@ -261,6 +261,36 @@ export default class Userlist extends React.Component {
         }
     }
 
+    async resetPass() {
+        try {
+            const resp = await fetch(
+                serverPath() + 'api/Users/ResestPass.php?ID=' + this.state.SelectedID.toString(),
+                {
+                    method:"GET",
+                    headers: {
+                        'Access-Control-Allow-Origin':'*',
+                        // 'Content-Type': 'multipart/form-data'
+                    },
+                    credentials: 'include'
+                }
+            ).then(se => se.json()).catch(null)
+            if (resp !== null && resp['CODE'] === 'OK') {
+                toast.success('Pomyślnie zresetowano hasło użytkownikowi!', {closeOnClick: true, theme: 'colored'})
+                // this.state.PopState = 1
+                this.refreshData()
+                this.forceUpdate()
+            } else {
+                toast.error('Wystąpił błąd!', {closeOnClick: true, theme: 'colored'})
+                this.refreshData()
+                this.forceUpdate()
+            }
+        } catch (e) {
+            toast.error('Wystąpił błąd!', {closeOnClick: true, theme: 'colored'})
+            this.refreshData()
+            this.forceUpdate()
+        }
+    }
+
     remove_User(id) {
         if (this.state.PopState === 0) {
             this.state.SelectedID = id
@@ -436,7 +466,7 @@ export default class Userlist extends React.Component {
                                     Administrator
                                 </option>
                             </select>
-                            <button>
+                            <button onClick={this.resetPass.bind(this)}>
                                 Zresetuj hasło
                             </button>
                         </div>

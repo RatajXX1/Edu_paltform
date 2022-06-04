@@ -52,7 +52,7 @@ if (enter_to_view_by_rank($sql_cursor, 3) && checkStructure()) {
     $pasword = randomPassword();
     $hashed = hash('SHA256', hash('SHA256', $pasword));
     $sql_cursor->query(
-        "INSERT INTO Users ( Image, Name, Surrname, Email, Password, Rank_type) values ('', '{$data['Name']}','{$data['Surrname']}', '{$data['Email']}', '{}', {$data['Rank']} )"
+        "INSERT INTO Users ( Image, Name, Surrname, Email, Password, Rank_type) values ('', '{$data['Name']}','{$data['Surrname']}', '{$data['Email']}', '$hashed', {$data['Rank']} )"
     );
     echo json_encode(array(
         'CODE' => 'OK',

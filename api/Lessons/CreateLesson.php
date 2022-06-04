@@ -76,7 +76,7 @@ if (enter_to_view_by_rank($sql_cursor,2 ) && checkStructure()) {
     $Lesson_ID = $sql_cursor->insert_id;
 
     foreach ($data['Lesson'] as $i => $val) {
-        $query .= "($Lesson_ID, $i + 1, '" . $val['Text'] . "' , '{$val['Files']}', " . $val['Answer'] . "),";
+        $query .= "($Lesson_ID, $i + 1, '" . base64_encode($val['Text']) . "' , '{$val['Files']}', " . $val['Answer'] . "),";
     }
     if ($query[-1] == ',') $query[-1] = ';';
     else $query .= ';';

@@ -8,6 +8,7 @@ import Calendar_pop from "./calendar_pop";
 import ShareLesson from "./ShareLesson";
 import * as mime from 'react-native-mime-types';
 import serverPath from "../utilis/server-path";
+import {Report} from "notiflix/build/notiflix-report-aio";
 
 import loading_lesson from '../images/loading_lesson.svg'
 import {toast} from "react-toastify";
@@ -255,7 +256,7 @@ export default class CreateLesson extends React.Component {
     }
 
     async sendFiles(index = 0) {
-        console.log("Zaczynam przesyłanie plików...")
+        // console.log("Zaczynam przesyłanie plików...")
         const form = new FormData()
         for (let i = 0; i < this.state.Content.Lesson[index].Files.length; i++) {
             form.append(this.state.Content.Lesson[index].Files[i].name, this.state.Content.Lesson[index].Files[i])
@@ -429,14 +430,26 @@ export default class CreateLesson extends React.Component {
                     this.forceUpdate()
                      return true
                 } else {
-                    console.log("erro 1")
-                    // window.location.reload()
+                    Report.failure(
+                        'Wystąpił błąd!',
+                        'Wystapił niznany błąd podczas tworzenia leckji, spróbój ponownie później!',
+                        'OK',
+                        () => {
+                            window.location.reload()
+                        }
+                    );
                     return false
                 }
             } else return false;
         } catch (e) {
-            console.log("erro 2")
-            // window.location.reload()
+            Report.failure(
+                'Wystąpił błąd!',
+                'Wystapił niznany błąd podczas tworzenia leckji, spróbój ponownie później! <br>' + e.toString(),
+                'OK',
+                () => {
+                    window.location.reload()
+                }
+            );
             return false
         }
     }

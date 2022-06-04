@@ -48,7 +48,7 @@ class Welcome_page extends React.Component {
     }
 
     submit_login() {
-        this.setState({username : 'ratajx1@gmail.com', password: 'root'})
+        // this.setState({username : 'ratajx1@gmail.com', password: 'root'})
         if (this.state.username.replaceAll(' ', '').length !== 0 &&
             this.state.password.replaceAll(' ', '').length !== 0) {
             if (validation.validateEmail(this.state.username)) {
@@ -81,6 +81,13 @@ class Welcome_page extends React.Component {
             ) {
                 return this.set_alert('Hasła nie są takie same')
             }
+            if (
+                this.state.RegOutput.Password.replaceAll(' ', '').length < 8
+                &&
+                this.state.RegOutput.RPassword.replaceAll(' ', '').length < 8
+            ) {
+                return this.set_alert('Hasło musi mieć minimum 8 znaków!')
+            }
 
             if (validation.validateEmail(this.state.RegOutput.login)) {
                 authorize.register(this.state.RegOutput.login, this.state.RegOutput.Password, this.state.RegOutput.Name, this.state.RegOutput.Surrname).then(
@@ -90,7 +97,7 @@ class Welcome_page extends React.Component {
                             window.location.href = '/main/dashboard'
                             // alert("succes")
                         } else {
-                            this.set_alert('Adres e-mail bądź hasło są niepoprawne lub podane konto nie istnieje!')
+                            this.set_alert('Taki adres e-mail już został użyty!')
                         }
                     }
                 )
@@ -111,7 +118,7 @@ class Welcome_page extends React.Component {
                         <a>Haslo</a>
                         <input type="password" placeholder="Hasło" onChange={e => this.setState({password :e.target.value})}/>
                     </div>
-                    <label className="container">
+                    <label style={{width: '80%'}} className="container">
                         <input type="checkbox" onChange={e => this.state.AutoLogin = e.target.checked}/>
                         <span className="checkmark"></span>
                         <a>
@@ -154,7 +161,7 @@ class Welcome_page extends React.Component {
                     </div>
                     <div className="input_div">
                         <a>Adres e-mail</a>
-                        <input type="text" placeholder="Adres e-mail" onChange={e => this.state.RegOutput.login = e.target.value}/>
+                        <input type="email" placeholder="Adres e-mail" onChange={e => this.state.RegOutput.login = e.target.value}/>
                     </div>
                     <div className="input_div">
                         <a>Haslo</a>

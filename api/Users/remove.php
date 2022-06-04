@@ -8,7 +8,7 @@ require '../Libs/utilis.php';
 require '../auth/Session.php';
 
 header('Content-Type: application/json');
-$ID = $_GET['ID'];
+$ID = $_GET['ID'] ?? NAN;
 
 
 $sql_cursor = sql_con();

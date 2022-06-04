@@ -4,7 +4,6 @@ import 'react-quill/dist/quill.snow.css';
 import serverPath from "../utilis/server-path";
 import parse from 'html-react-parser';
 import ReactQuill from "react-quill";
-
 import loading_img from '../images/Double Ring-1s-200px.svg';
 import error_img from  '../images/bug-fill.svg';
 import * as mime from "react-native-mime-types";
@@ -245,7 +244,9 @@ export default class Lesson extends React.Component {
                                     (() => {
                                         const tab = []
                                         for (let d = 0; d < this.state.Content.Content[index].UFiles.length; d++) {
-                                            tab.push(<div   className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
+                                            tab.push(<div onClick={() => {
+                                                window.open(serverPath() + 'api/Files' + this.state.Content.Content[index].UFiles[d].FilePath, '_blank')
+                                            }}  className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                      className="bi bi-file-arrow-down" viewBox="0 0 16 16">
                                                     <path
@@ -313,7 +314,9 @@ export default class Lesson extends React.Component {
                                     {
                                         const tab = []
                                         for (let d = 0; d < this.state.Content.Content[index].UFiles.length; d++) {
-                                            tab.push(<div className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
+                                            tab.push(<div onClick={() => {
+                                                window.open(serverPath() + 'api/Files' + this.state.Content.Content[index].UFiles[d].FilePath, '_blank')
+                                            }} className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                      className="bi bi-file-arrow-down" viewBox="0 0 16 16">
                                                     <path
@@ -357,7 +360,7 @@ export default class Lesson extends React.Component {
             if (this.state.Output[index] === undefined) {
                 if (this.state.ActiveIndex === 0) {
                     this.state.ActiveIndex = index
-                    console.log('active', this.state.ActiveIndex)
+                    // console.log('active', this.state.ActiveIndex)
                 }
                 this.state.Output.push({
                     Text: '',
@@ -408,7 +411,9 @@ export default class Lesson extends React.Component {
                                 const tab = []
                                 for (let d = 0; d < this.state.Content.Content[i].Files.length; d++) {
                                     tab.push(
-                                            <div  className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
+                                            <div onClick={() => {
+                                                window.open(serverPath() + 'api/Files' + this.state.Content.Content[i].Files[d].FilePath, '_blank')
+                                            }}  className={'Dash_main_view_body_chapter_files_item Dash_main_view_body_chapter_files_item_close_bt '}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                      className="bi bi-file-arrow-down" viewBox="0 0 16 16">
                                                     <path
@@ -430,11 +435,11 @@ export default class Lesson extends React.Component {
                                                     </a>
                                                 </div>
 
-                                                <svg className={'Dash_main_view_body_chapter_files_item_close'} xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                     viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                                                </svg>
+                                                {/*<svg className={'Dash_main_view_body_chapter_files_item_close'} xmlns="http://www.w3.org/2000/svg" width="16" height="16"*/}
+                                                {/*     viewBox="0 0 16 16">*/}
+                                                {/*    <path*/}
+                                                {/*        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>*/}
+                                                {/*</svg>*/}
                                             </div>
                                     )
                                 }
@@ -646,7 +651,7 @@ export default class Lesson extends React.Component {
                     e.id = e.id + '.' + mime.extension(file.type)
                     iterator += 1
                 })
-                await sendData(form).then((resp) => {
+                if (Array.from(form.entries()).length > 0) await sendData(form).then((resp) => {
                     if (resp !== null) {
                         if (resp['CODE'] === 'OK') {
                             if (Object.keys(resp['Files']).length > 0) {
@@ -673,6 +678,8 @@ export default class Lesson extends React.Component {
             return toast.error('Załączone pliki nie mogą przekracząć 10Mb!',{closeOnClick: true, theme: 'colored'})
         }
 
+        if (this.state.Output[this.state.ActiveIndex].Files.length + this.state.Output[this.state.ActiveIndex].Text.length === 0)
+            return toast.error('Odpowiedz nie może byc pusta!',{closeOnClick: true, theme: 'colored'})
         // for(let i = 0; i < this.state.Output.length; i++) {
         if (this.state.Output[this.state.ActiveIndex].Files.length > 0) await sendAdded(this.state.ActiveIndex)
         if (this.state.Output[this.state.ActiveIndex].Text.length > 0) await ImageFromEditor(this.state.ActiveIndex)

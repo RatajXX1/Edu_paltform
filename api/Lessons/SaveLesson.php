@@ -23,7 +23,7 @@ function checkStructure() {
         array_key_exists('Con_ID', $data) &&
         array_key_exists('Text', $data) &&
         array_key_exists('Files', $data)) {
-        if (is_numeric($data['Les_ID']) && is_numeric($data['Con_ID']) && !empty($data['Files']) && isHTML($data['Text'])) {
+        if (is_numeric($data['Les_ID']) && is_numeric($data['Con_ID'])) {
             return true;
         } else return false;
     } else return false;
@@ -56,7 +56,10 @@ if (enter_to_view($sql_cursor) && checkStructure()) {
         $sql_cursor->close();
         exit();
     }
-    $sql_cursor->query(
+    $sql_cursor->query("DELETE FROM UsersLessonsConent WHERE Les_ID = {$data['Les_ID']} AND Les_Content = {$data['Con_ID']} AND UserID = $user_ID");
+
+
+    $stmnt = $sql_cursor->prepare(
         "INSERT INTO UsersLessonsConent 
                 (
                  Les_ID,
@@ -71,13 +74,15 @@ if (enter_to_view($sql_cursor) && checkStructure()) {
                         {$data['Les_ID']},
                         {$data['Con_ID']},
                         $user_ID,
-                        '{$data['Text']}',
+                        ?,
                         '{$data['Files']}',
                         2,
                         0
                 );"
     );
-
+    $stmnt->bind_param('s', $data['Text']);
+    $stmnt->execute();
+    $stmnt->close();
     echo json_encode(array(
         'CODE' => 'OK',
         'Mess' => 'Stan lekcji zapisany'

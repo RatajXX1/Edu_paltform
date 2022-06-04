@@ -26,7 +26,7 @@ class Main extends React.Component {
             mobile_view: false,
             MainScroll: React.createRef()
         }
-        console.log(this.props.User_data)
+        // console.log(this.props.User_data)
     }
 
     selectedPage() {
@@ -42,7 +42,7 @@ class Main extends React.Component {
             case '/main/createlesson':
                 return <CreateLesson/>
             case '/main/createdLesson':
-                return <CreatedLessons/>
+                return <CreatedLessons scroll={this.state.MainScroll}/>
             case '/main/Profile':
                 return <Profile User_data={this.props.User_data}/>
             case '/main/Answers':

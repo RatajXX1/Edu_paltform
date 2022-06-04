@@ -65,7 +65,7 @@ if (enter_to_view($sql_cursor) && is_numeric($les_ID)) {
                 if ($lesson_state->num_rows == 0) {
 
                     $data_1[] = array(
-                        'Content' => $row['Content'],
+                        'Content' => base64_decode($row['Content']),
                         'Files' => $files_1_O,
                         'Answer' => $row['AnswerType'],
                         'UFiles' =>  '',
@@ -87,7 +87,7 @@ if (enter_to_view($sql_cursor) && is_numeric($les_ID)) {
                         }
                     }
                     $data_1[] = array(
-                        'Content' => $row['Content'],
+                        'Content' => base64_decode($row['Content']),
                         'Files' => $files_1_O,
                         'Answer' => $row['AnswerType'],
                         'UFiles' =>  $files_2_O,
